@@ -4,8 +4,10 @@ body, html
 }
 body
 {
+    margin:0;
+    padding: 0;
     display:grid;
-    grid-template-columns: repeat(1,2fr) repeat(1, 4fr);
+    grid-template-columns: repeat(1,1fr) repeat(1, 4fr);
     grid-template-rows: repeat(1,2fr) repeat(1,4fr) repeat(1,0.5fr);
     gap: 3px;
 }
@@ -20,6 +22,12 @@ body
     grid-column: 1/6;
     color:white;
     background-color: #393f4d;
+}
+
+.header>div:first-child
+{
+    font-size: larger;
+    font-weight:900;
 }
 .corner
 {
@@ -40,10 +48,10 @@ body
     place-self: center;
 }
 
-.corner div>div
+.corner>div
 {
-    width:15rem;
-    height:10rem;
+    width:12rem;
+    height:8rem;
     background-color: white;
     place-self: center;
 }
@@ -69,20 +77,25 @@ body
     border-bottom: 1px solid black;
 }
 
+.sub-grid>div
+{
+    place-self: center;
+}
+
 .ar-title
 {
-    padding: 3px;
+    padding: 7px;
     background-color: skyblue;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25%,1fr));
     justify-items: center;
     align-items: center;
-    gap: 3px;
+    gap: 7px;
 }
 .ar-title div
 {
 
-    
+    padding-bottom: 10px;
     background-color: white;
     text-align: center;
     border: 1px solid black;
@@ -96,7 +109,6 @@ body
 .ar-title div p:nth-child(even)
 {
     text-align: start;
-    margin-right: 3rem;
 }
 
 .footer
